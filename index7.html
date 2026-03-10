@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL BASSIT INTERNATIONAL | Excellence Immobilière</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fdfdfd; }
+        
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        
+        .hero-gradient { 
+            background: linear-gradient(135deg, rgba(2, 25, 55, 0.95) 0%, rgba(5, 44, 94, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+        }
+
+        .card-modern { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 1px solid #f1f5f9; }
+        .card-modern:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(2, 25, 55, 0.15); border-color: #fb923c; }
+
+        .btn-shine { position: relative; overflow: hidden; }
+        .btn-shine::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent); transform: rotate(45deg); transition: 0.5s; }
+        .btn-shine:hover::after { left: 120%; }
+
+        .fiche-preview { font-family: 'Georgia', serif; background: white; color: #0a1e3c; }
+        
+        @media print { .no-print { display: none !important; } }
+    </style>
+</head>
+<body class="text-slate-900 overflow-x-hidden">
+
+<nav class="fixed w-full z-50 px-4 mt-4 no-print">
+    <div class="container mx-auto glass rounded-2xl shadow-sm px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <img src="https://i.ibb.co/VYv0GZJ/LOGO-AL-BASSIT.jpg" alt="Logo" class="h-10 md:h-12 rounded-lg shadow-sm">
+            <div>
+                <h1 class="font-extrabold text-blue-950 text-base leading-tight tracking-tighter">AL BASSIT <span class="text-orange-500">INTL</span></h1>
+                <p class="text-[8px] font-bold text-slate-400 uppercase tracking-[0.2em]">Excellence & Rigueur</p>
+            </div>
+        </div>
+        <div class="hidden lg:flex items-center space-x-8 font-semibold text-xs uppercase tracking-widest text-slate-600">
+            <a href="#accueil" class="hover:text-orange-500 transition-colors">Accueil</a>
+            <a href="#services" class="hover:text-orange-500 transition-colors">Services</a>
+            <a href="#verification" class="hover:text-orange-500 transition-colors">Vérifier</a>
+            <a href="#mutation" class="hover:text-orange-500 transition-colors">Mutation</a>
+        </div>
+        <button onclick="openAdmin()" class="bg-blue-950 text-white text-[10px] px-5 py-2.5 rounded-xl font-bold uppercase tracking-widest hover:bg-orange-500 transition-all shadow-lg shadow-blue-900/20">
+            <i class="fas fa-lock-open mr-2 opacity-70"></i>Admin
+        </button>
+    </div>
+</nav>
+
+<section id="accueil" class="hero-gradient min-height-[90vh] pt-40 pb-24 px-6 no-print">
+    <div class="container mx-auto text-center">
+        <span class="inline-block bg-orange-500/20 text-orange-400 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6 border border-orange-500/30">
+            Leader au Burkina Faso
+        </span>
+        <h2 class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tighter leading-tight">
+            L'immobilier de demain, <br><span class="text-orange-500">construit aujourd'hui.</span>
+        </h2>
+        <p class="text-lg md:text-xl text-blue-100/80 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            Promotion immobilière, BTP et Logistique. Nous transformons vos projets en héritages durables avec une expertise certifiée.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-5">
+            <a href="#souscription" class="btn-shine bg-orange-500 text-white px-10 py-5 rounded-2xl font-bold uppercase text-xs tracking-[0.2em] shadow-2xl shadow-orange-500/40 transition-all">
+                Souscrire en ligne
+            </a>
+            <a href="#verification" class="glass text-white px-10 py-5 rounded-2xl font-bold uppercase text-xs tracking-[0.2em] hover:bg-white hover:text-blue-900 transition-all">
+                Vérifier un titre
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-24 bg-white no-print">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="max-w-xl">
+                <h3 class="text-orange-500 font-black text-xs uppercase tracking-[0.4em] mb-4">Expertises</h3>
+                <h2 class="text-4xl font-extrabold text-blue-950 tracking-tighter">Une vision globale pour <br>des solutions locales.</h2>
+            </div>
+            <div class="h-[1px] flex-grow bg-slate-100 mx-8 hidden md:block"></div>
+            <p class="text-slate-400 text-sm max-w-xs italic">La rigueur au service du développement durable de nos infrastructures.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="md:col-span-2 card-modern bg-slate-50 rounded-[2.5rem] p-10 overflow-hidden relative group">
+                <div class="relative z-10">
+                    <div class="bg-blue-900 w-12 h-12 rounded-xl flex items-center justify-center text-white mb-8 shadow-lg">
+                        <i class="fas fa-home text-xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-extrabold text-blue-950 mb-4 uppercase tracking-tight">Promotion Immobilière</h4>
+                    <p class="text-slate-500 leading-relaxed max-w-md">Vente de terrains aménagés et construction de logements sociaux et standing. Nous facilitons votre accès à la propriété.</p>
+                </div>
+                <div class="absolute bottom-[-20px] right-[-20px] text-[12rem] text-blue-950/5 font-black group-hover:text-orange-500/10 transition-colors">01</div>
+            </div>
+
+            <div class="card-modern bg-blue-950 rounded-[2.5rem] p-10 text-white overflow-hidden relative group">
+                <div class="bg-orange-500 w-12 h-12 rounded-xl flex items-center justify-center text-white mb-8 shadow-lg">
+                    <i class="fas fa-hard-hat text-xl"></i>
+                </div>
+                <h4 class="text-2xl font-extrabold mb-4 uppercase tracking-tight">BTP & Génie Civil</h4>
+                <p class="text-blue-200/70 text-sm leading-relaxed">Routes, ponts et infrastructures de grande envergure au Burkina.</p>
+                <div class="absolute bottom-[-20px] right-[-20px] text-[10rem] text-white/5 font-black">02</div>
+            </div>
+
+            <div class="card-modern bg-slate-50 rounded-[2.5rem] p-8 overflow-hidden relative group">
+                <h4 class="text-lg font-extrabold text-blue-950 mb-2 uppercase">Transport Logistique</h4>
+                <p class="text-slate-500 text-xs">Gestion de fret lourd et solutions logistiques internationales.</p>
+                <i class="fas fa-truck-moving absolute bottom-6 right-6 text-4xl text-slate-200 group-hover:text-orange-500/20 transition-colors"></i>
+            </div>
+
+            <div class="md:col-span-2 card-modern bg-slate-900 rounded-[2.5rem] p-8 text-white flex items-center justify-between group">
+                <div>
+                    <h4 class="text-xl font-extrabold mb-2 uppercase tracking-tighter">Industrie Chimique</h4>
+                    <p class="text-slate-400 text-sm">Distribution certifiée de produits chimiques industriels.</p>
+                </div>
+                <div class="h-14 w-14 rounded-full border border-white/10 flex items-center justify-center group-hover:border-orange-500 transition-colors">
+                    <i class="fas fa-flask text-orange-500"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-slate-50 no-print" id="verification">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12">
+            <div class="bg-white p-12 rounded-[3rem] shadow-sm border border-slate-100">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-2 h-10 bg-blue-900 rounded-full"></div>
+                    <h3 class="text-2xl font-extrabold text-blue-950 uppercase tracking-tighter">Espace Client</h3>
+                </div>
+                <p class="text-slate-400 text-sm mb-10">Authentifiez vos titres de propriété en quelques secondes.</p>
+                <div class="space-y-4">
+                    <input type="text" id="refInput" placeholder="Référence du titre" class="w-full px-6 py-4 bg-slate-50 border-none rounded-2xl outline-none focus:ring-2 focus:ring-orange-500/50 transition-all font-semibold">
+                    <input type="password" id="clientPassInput" placeholder="Code de sécurité" class="w-full px-6 py-4 bg-slate-50 border-none rounded-2xl outline-none focus:ring-2 focus:ring-orange-500/50 transition-all font-semibold">
+                    <button onclick="clientAccess()" class="w-full bg-blue-950 text-white font-black py-5 rounded-2xl hover:bg-orange-500 transition-all uppercase text-xs tracking-widest shadow-xl shadow-blue-900/10">
+                        Visualiser l'Attribution
+                    </button>
+                </div>
+                <div id="verifMessage" class="mt-6 text-center text-xs font-bold hidden"></div>
+            </div>
+
+            <div class="bg-white p-12 rounded-[3rem] shadow-sm border border-slate-100" id="mutation">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-2 h-10 bg-orange-500 rounded-full"></div>
+                    <h3 class="text-2xl font-extrabold text-blue-950 uppercase tracking-tighter">Mutation Digitale</h3>
+                </div>
+                <form id="mutationForm" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" placeholder="Nom du Cédant" class="px-6 py-4 bg-slate-50 border-none rounded-2xl outline-none focus:ring-2 focus:ring-blue-900/50 transition-all text-sm font-semibold">
+                        <input type="text" placeholder="N° de Titre" class="px-6 py-4 bg-slate-50 border-none rounded-2xl outline-none focus:ring-2 focus:ring-blue-900/50 transition-all text-sm font-semibold">
+                    </div>
+                    <label class="flex flex-col items-center justify-center p-8 border-2 border-dashed border-slate-100 rounded-[2rem] hover:bg-orange-50 transition-colors cursor-pointer group">
+                        <input type="file" class="hidden">
+                        <i class="fas fa-file-upload text-3xl text-slate-300 mb-3 group-hover:text-orange-500 transition-colors"></i>
+                        <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Scanner CNIB + Fiche</span>
+                    </label>
+                    <button type="submit" class="w-full bg-slate-900 text-white font-black py-5 rounded-2xl hover:bg-orange-500 transition-all uppercase text-xs tracking-widest shadow-xl">
+                        Initier le transfert
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-blue-950 text-white pt-24 pb-12 no-print relative overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="grid md:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-2">
+                <img src="https://i.ibb.co/VYv0GZJ/LOGO-AL-BASSIT.jpg" class="h-16 rounded-xl mb-8">
+                <h4 class="text-3xl font-extrabold tracking-tighter mb-4">AL BASSIT INTERNATIONAL</h4>
+                <p class="text-blue-200/50 font-light max-w-sm leading-relaxed">Expert en solutions immobilières et infrastructures au Burkina Faso depuis 2020. Notre engagement : Qualité, Transparence et Sécurité.</p>
+            </div>
+            <div>
+                <h5 class="text-orange-500 font-black text-xs uppercase tracking-widest mb-6">Contact</h5>
+                <ul class="space-y-4 text-sm text-blue-100/70">
+                    <li><i class="fas fa-phone mr-3 text-orange-500"></i> (+226) 20 98 01 59 /05 61 00 00 / 69 61 00 00</li>
+                    <li><i class="fas fa-envelope mr-3 text-orange-500"></i> groupalbassit@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt mr-3 text-orange-500"></i> Bobo-Dioulasso, 01 BP 1195</li>
+                </ul>
+            </div>
+            <div>
