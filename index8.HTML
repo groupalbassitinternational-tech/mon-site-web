@@ -1,0 +1,110 @@
+<script>
+
+// Base de données simulée
+const titres = [
+{
+reference: "AB2024-001",
+code: "1234",
+nom: "OUEDRAOGO Issa",
+parcelle: "Lot 25 - Section A",
+superficie: "350 m²",
+localite: "Ouagadougou"
+},
+{
+reference: "AB2024-002",
+code: "5678",
+nom: "TRAORE Ibrahim",
+parcelle: "Lot 12 - Section B",
+superficie: "500 m²",
+localite: "Bobo-Dioulasso"
+}
+];
+
+
+// ACCES CLIENT
+function clientAccess(){
+
+let ref = document.getElementById("refInput").value;
+let pass = document.getElementById("clientPassInput").value;
+
+let message = document.getElementById("verifMessage");
+
+let resultat = titres.find(t => t.reference === ref && t.code === pass);
+
+if(resultat){
+
+message.classList.remove("hidden");
+message.style.color="green";
+
+message.innerHTML = `
+Titre valide <br><br>
+
+Nom : <b>${resultat.nom}</b><br>
+Parcelle : <b>${resultat.parcelle}</b><br>
+Superficie : <b>${resultat.superficie}</b><br>
+Localité : <b>${resultat.localite}</b>
+`;
+
+}
+else{
+
+message.classList.remove("hidden");
+message.style.color="red";
+
+message.innerHTML = "Titre introuvable ou code incorrect.";
+
+}
+
+}
+
+
+// ADMIN
+function openAdmin(){
+
+let login = prompt("Identifiant Admin");
+let pass = prompt("Mot de passe");
+
+if(login==="admin" && pass==="admin123"){
+
+alert("Connexion réussie");
+
+let ref = prompt("Nouvelle référence");
+let code = prompt("Code sécurité");
+let nom = prompt("Nom client");
+let parcelle = prompt("Parcelle");
+let superficie = prompt("Superficie");
+let localite = prompt("Localité");
+
+titres.push({
+reference: ref,
+code: code,
+nom: nom,
+parcelle: parcelle,
+superficie: superficie,
+localite: localite
+});
+
+alert("Titre ajouté avec succès");
+
+}
+else{
+
+alert("Accès refusé");
+
+}
+
+}
+
+
+// FORMULAIRE MUTATION
+document.getElementById("mutationForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Votre demande de mutation a été envoyée avec succès.\nUn agent vous contactera.");
+
+this.reset();
+
+});
+
+</script>
